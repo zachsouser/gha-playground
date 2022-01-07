@@ -1,0 +1,9 @@
+name: Delete
+on: 
+  delete:
+    branches:
+      - test/**
+
+jobs:
+  echo:
+    - run: echo "${{ github.event.ref.name }}"
