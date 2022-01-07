@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - if: ${{ github.event.ref }} == test/*
+      - if: ${{ startsWith(github.event.ref, 'test/*') }}
         run: echo "${{ github.event.ref }}"
