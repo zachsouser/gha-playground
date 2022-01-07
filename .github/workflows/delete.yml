@@ -2,8 +2,7 @@ name: Delete
 on: delete
 jobs:
   echo:
+    if: ${{ startsWith(github.event.ref, 'test/*') }}
     runs-on: ubuntu-latest
-    
     steps:
-      - if: ${{ startsWith(github.event.ref, 'test/*') }}
-        run: echo "${{ github.event.ref }}"
+      - run: echo "${{ github.event.ref }}"
