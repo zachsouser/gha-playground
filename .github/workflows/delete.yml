@@ -6,4 +6,6 @@ on:
 
 jobs:
   echo:
-    - run: echo "${{ github.event.ref.name }}"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event.ref }}"
