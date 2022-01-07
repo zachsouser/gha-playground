@@ -3,6 +3,7 @@ on: delete
 jobs:
   echo:
     runs-on: ubuntu-latest
-    if: ${{ github.event.ref }} == test/*
+    
     steps:
-      - run: echo "${{ github.event.ref }}"
+      - if: ${{ github.event.ref }} == test/*
+        run: echo "${{ github.event.ref }}"
