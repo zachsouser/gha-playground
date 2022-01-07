@@ -1,11 +1,8 @@
 name: Delete
-on: 
-  delete:
-    branches:
-      - test/**
-
+on: delete:
 jobs:
   echo:
     runs-on: ubuntu-latest
+    if: ${{ github.event.ref }} == test/*
     steps:
       - run: echo "${{ github.event.ref }}"
