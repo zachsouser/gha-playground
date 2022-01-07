@@ -1,5 +1,5 @@
 name: Delete
-on: delete:
+on: delete
 jobs:
   echo:
     runs-on: ubuntu-latest
